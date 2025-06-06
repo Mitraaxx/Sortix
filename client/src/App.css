@@ -217,33 +217,3 @@ h1 {
 }
 
 /* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
-  }
-  
-  .App {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  }
-  
-  .color-legend,
-  .algorithm-description {
-    background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
-    color: #e0e0e0;
-  }
-  
-  .algorithm-description h2 {
-    color: #4a9eff;
-  }
-  
-  .complexity-info > div {
-    background: linear-gradient(145deg, #3d3d3d, #2a2a2a);
-    color: #e0e0e0;
-  }
-  
-  .merge-sort-note {
-    background: linear-gradient(145deg, #4a3d00, #3d3100);
-    border-left-color: #f39c12;
-  }
-}
