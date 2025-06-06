@@ -1,0 +1,330 @@
+/* Mobile-first responsive design */
+.array-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 400px;
+  margin-top: 20px;
+  padding: 0 10px;
+  overflow-x: auto;
+  min-width: 100%;
+}
+
+.controls-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 0 15px;
+}
+
+.bar {
+  margin: 0 2px;
+  width: calc((100vw - 60px) / 30);
+  min-width: 8px;
+  max-width: 30px;
+  background-color: #6495ED;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px #b3b3b3, -2px -2px 8px #ffffff;
+  transition: height 0.2s, background-color 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #060606;
+  font-size: 8px;
+  padding-bottom: 2px;
+  font-weight: bold;
+}
+
+.bar.yellow {
+  background-color: #f5c85c;
+}
+
+.bar.red {
+  background-color: #ff6b6b;
+}
+
+.bar.green {
+  background-color: #8fd19e;
+}
+
+.bar.blue {
+  background-color: #6495ED;
+}
+
+.new-button {
+  background-color: #ecf0f3;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px #b3b3b3, -5px -5px 15px #ffffff;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 280px;
+  touch-action: manipulation;
+}
+
+.new-button:hover {
+  box-shadow: 3px 3px 10px #b3b3b3, -3px -3px 10px #ffffff;
+}
+
+.new-button:active {
+  box-shadow: inset 5px 5px 15px #b3b3b3, inset -5px -5px 15px #ffffff;
+  transform: scale(0.98);
+}
+
+.new-button:focus {
+  outline: none;
+}
+
+.neumorphism-dropdown {
+  width: 100%;
+  max-width: 280px;
+  padding: 12px 15px;
+  background-color: #ecf0f3;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px #b3b3b3, -5px -5px 15px #ffffff;
+  appearance: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  touch-action: manipulation;
+}
+
+.neumorphism-dropdown::after {
+  content: '\25BC';
+  font-size: 12px;
+  color: #666;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.neumorphism-dropdown:hover {
+  box-shadow: 3px 3px 10px #b3b3b3, -3px -3px 10px #ffffff;
+}
+
+.neumorphism-dropdown:focus {
+  box-shadow: inset 5px 5px 15px #b3b3b3, inset -5px -5px 15px #ffffff;
+}
+
+.neumorphism-dropdown option {
+  padding: 12px;
+  background-color: #ecf0f3;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px #b3b3b3, -3px -3px 10px #ffffff;
+  font-size: 16px;
+}
+
+.speedControl {
+  margin-top: 14px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+
+.neumorphic-input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 15px;
+  background-color: #ecf0f3;
+  border: none;
+  box-shadow: inset 5px 5px 10px #b3b3b3, inset -5px -5px 10px #ffffff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.neumorphic-input:focus {
+  box-shadow: inset 2px 2px 5px #b3b3b3, inset -2px -2px 5px #ffffff, 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.neumorphic-input::placeholder {
+  color: #999999;
+}
+
+.info-icon-wrapper {
+  position: relative;
+  margin-left: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.info-icon {
+  background-color: #ecf0f3;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+  box-shadow: 5px 5px 10px #b3b3b3, -5px -5px 10px #ffffff;
+  transition: box-shadow 0.3s ease;
+}
+
+.info-icon-wrapper:hover .info-icon {
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2), -3px -3px 7px rgba(255, 255, 255, 0.7);
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  border-radius: 5px;
+  position: absolute;
+  top: -45px;
+  left: -85px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+}
+
+.info-icon-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+  .array-container {
+    height: 450px;
+    padding: 0 20px;
+  }
+  
+  .controls-container {
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .bar {
+    margin: 0 3px;
+    width: calc((100vw - 120px) / 30);
+    min-width: 15px;
+    max-width: 35px;
+    font-size: 10px;
+    padding-bottom: 3px;
+    border-radius: 10px;
+  }
+  
+  .new-button,
+  .neumorphism-dropdown {
+    width: auto;
+    min-width: 200px;
+  }
+  
+  .speedControl {
+    width: auto;
+    min-width: 250px;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+  .array-container {
+    height: 500px;
+    padding: 0 40px;
+  }
+  
+  .bar {
+    margin: 0 5px;
+    width: 30px;
+    min-width: 25px;
+    font-size: 12px;
+    padding-bottom: 5px;
+    box-shadow: 5px 5px 15px #b3b3b3, -5px -5px 15px #ffffff;
+  }
+  
+  .new-button {
+    padding: 15px 30px;
+  }
+  
+  .neumorphism-dropdown {
+    width: 200px;
+    padding: 10px;
+  }
+  
+  .neumorphic-input {
+    width: 250px;
+    padding: 10px 15px;
+  }
+  
+  .info-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+  
+  .tooltip-text {
+    width: 180px;
+    padding: 5px;
+    top: -40px;
+    left: -75px;
+  }
+}
+
+/* Very small mobile devices */
+@media screen and (max-width: 480px) {
+  .array-container {
+    height: 300px;
+    margin-top: 15px;
+    padding: 0 5px;
+  }
+  
+  .bar {
+    margin: 0 1px;
+    width: calc((100vw - 40px) / 30);
+    min-width: 6px;
+    font-size: 7px;
+    padding-bottom: 1px;
+    border-radius: 6px;
+  }
+  
+  .new-button,
+  .neumorphism-dropdown {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  
+  .controls-container {
+    gap: 10px;
+    margin: 15px 0;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .array-container {
+    height: 200px;
+  }
+  
+  .bar {
+    font-size: 6px;
+    padding-bottom: 1px;
+  }
+}
